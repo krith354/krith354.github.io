@@ -51,3 +51,7 @@ h1 {
 .bg_white {
     background-color: white;
 }
+ul {
+    list-style-type: square;
+    padding: 0px 30px 0px 30px !important;
+}
