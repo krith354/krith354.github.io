@@ -6,8 +6,8 @@
       </div>
       <div class="w-100 d-flex flex-column align-items-center">
         <h3 class="bold cblue m-0">Cristian Ruiz</h3>
-        <p class="small m-0">PO BOX 5245, Aguadilla, PR 00605</p>
-        <p class="small m-0">(787) 354-7106</p>
+        <!-- <p class="small m-0">PO BOX 5245, Aguadilla, PR 00605</p>
+        <p class="small m-0">(787) 354-7106</p> -->
       </div>
       <br>
       <div class="w-100 d-flex justify-content-around">
@@ -44,7 +44,8 @@
       </div>
     </div>
     <div class="p-4 col-lg-9">
-      <div id="nav-tabContent" class="tab-content overflow-auto">
+      <app-embedded *ngIf="showing"></app-embedded>
+      <div id="nav-tabContent" class="tab-content overflow-auto" *ngIf="!showing">
         <div id="list-experience" class="tab-pane fade show active" role="tabpanel" aria-labelledby="list-experience-list">
           <h6 class="bold cblue">
             EXPERIENCE
@@ -53,7 +54,7 @@
             <div class="container-fluid m-0 pt-2 px-0">
               <div class="row m-0 p-0">
                 <div class="col-sm-6 p-0">
-                  <h6 class="bold mb-0">Embedded Systems Research</h6>
+                  <h6 class="bold mb-0">Embedded Systems Research <span class="small cblue btn-link mb-0" type="button" (click)="show()">Learn More</span></h6>
                 </div>
                 <div class="col-sm-6 p-0">
                   <h6 class="small mb-0 text-md-right">Aug 2019 - Dec 2019</h6>
@@ -61,10 +62,12 @@
               </div>
             </div>
             <div class="d-flex align-items-center mb-1">
-              <span class="small font-italic">MCS Healthcare Holdings Inc - San Juan, PR</span>
+              <span class="small font-italic">University of Puerto Rico - Mayagüez</span>
             </div>
             <ul class="mb-1">
-              <li class="normal">Studied the structure, components, design, and specifications of current Field Programmable Gate Arrays (FPGAs) to understand their applications in Edge Computing and Internet of Things (IoT) and develop a feasible project.</li>
+              <li class="normal">
+                Studied the structure, components, design, and specifications of current Field Programmable Gate Arrays (FPGAs) to understand their applications in Edge Computing and Internet of Things (IoT) and develop a feasible project.
+              </li>
             </ul>
             <div class="container-fluid m-0 pt-2 px-0">
               <div class="row m-0 p-0">
@@ -77,7 +80,7 @@
               </div>
             </div>
             <div class="d-flex align-items-center mb-1">
-              <span class="small font-italic">University of Puerto Rico - Mayagüez</span>
+              <span class="small font-italic">MCS Healthcare Holdings Inc - San Juan, PR</span>
             </div>
             <ul class="mb-1">
               <li class="normal">Developed a web application focused on automating the auditing process for user accesses in the IT Security Unit by processing and analyzing data from over 2000 internal and external company users and generating 8 different user access certifications and reports.</li>
