@@ -9,13 +9,13 @@
     width: 20% !important;
 }
 .icon-btn {
-    width: 60px;
-    height: 60px;
+    width: 48px;
+    height: 48px;
     background-color: transparent;
 }
 .icon-btn:hover {
-    width: 60px;
-    height: 60px;
+    width: 48px;
+    height: 48px;
     border-radius: 100%;
     background-color: lightgray;
 }

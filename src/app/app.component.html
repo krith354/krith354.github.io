@@ -1,30 +1,28 @@
 <div class="container-fluid p-0">
   <div class="w-100 row m-0">
-    <div id="menu" class="bg-light shadow-sm col-lg-3 sticky-top">
+    <div id="menu" class="bg-light shadow-sm col-md-3 sticky-top">
       <div class="w-100 d-flex justify-content-center">
-        <img src="./assets/profile_pic_cris.jpg" class="rounded-circle my-4 shadow img-width" alt="Picture of Cristian Ruiz">
+        <img src="./assets/profile_pic_cris.jpg" class="rounded-circle my-2 shadow img-width" alt="Picture of Cristian Ruiz">
       </div>
       <div class="w-100 d-flex flex-column align-items-center">
         <h3 class="bold cblue m-0">Cristian Ruiz</h3>
         <!-- <p class="small m-0">PO BOX 5245, Aguadilla, PR 00605</p>
         <p class="small m-0">(787) 354-7106</p> -->
       </div>
-      <br>
-      <div class="w-100 d-flex justify-content-around">
+      <div class="w-100 d-flex justify-content-around my-1">
         <div class="d-flex align-items-center justify-content-center icon-btn" type="button" onclick="javascript:window.open('https://linkedin.com/in/cristian-ruiz/', '_blank');">
-          <img src="./assets/linkedin.svg" alt="LinkedIn Icon" width="32" height="32" title="LinkedIn">
+          <img src="./assets/linkedin.svg" alt="LinkedIn Icon" width="24" height="24" title="LinkedIn">
         </div>
         <div class="d-flex align-items-center justify-content-center icon-btn" type="button" onclick="javascript:window.open('https://mail.google.com/mail/?view=cm&fs=1&to=cristian.ruiz1@upr.edu');">
-          <img src="./assets/gmail.svg" alt="GMail Icon" width="32" height="32" title="GMail">
+          <img src="./assets/gmail.svg" alt="GMail Icon" width="24" height="24" title="GMail">
         </div>
         <div class="d-flex align-items-center justify-content-center icon-btn" type="button" onclick="javascript:window.open('https://github.com/krith354/', '_blank');">
-          <img src="./assets/github.svg" alt="GitHub Icon" width="32" height="32" title="GitHub">
+          <img src="./assets/github.svg" alt="GitHub Icon" width="24" height="24" title="GitHub">
         </div>
         <div class="d-flex align-items-center justify-content-center icon-btn" type="button" onclick="javascript:window.open('https://medium.com/@cristianruiz1/', '_blank');">
-          <img src="./assets/medium.svg" alt="Medium Icon" width="32" height="32" title="Medium">
+          <img src="./assets/medium.svg" alt="Medium Icon" width="24" height="24" title="Medium">
         </div>
       </div>
-      <br>
       <div id="list-tab" class="mb-4 list-group" role="tablist">
         <a id="list-experience-list" class="w-100 text-center menu-btn list-group-item list-group-item-action active" href="#list-experience" data-toggle="list" role="tab" aria-controls="experience">
           <h6 class="bold m-0">EXPERIENCE</h6>
@@ -43,7 +41,7 @@
         </a>
       </div>
     </div>
-    <div class="p-4 col-lg-9">
+    <div class="p-4 col-md-9">
       <app-embedded *ngIf="showing"></app-embedded>
       <div id="nav-tabContent" class="tab-content overflow-auto" *ngIf="!showing">
         <div id="list-experience" class="tab-pane fade show active" role="tabpanel" aria-labelledby="list-experience-list">
