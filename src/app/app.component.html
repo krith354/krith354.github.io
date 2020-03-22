@@ -40,10 +40,13 @@
           <h6 class="bold m-0">LEADERSHIP & ACTIVITIES</h6>
         </a>
       </div>
+      <button *ngIf="!game" class="btn btn-dark" (click)="showGame()">Enter Indie Game</button>
+      <button *ngIf="game" class="btn btn-dark" (click)="showGame()">Exit Indie Game</button>
     </div>
     <div class="p-4 col-md-9">
       <app-embedded *ngIf="showing"></app-embedded>
-      <div id="nav-tabContent" class="tab-content overflow-auto" *ngIf="!showing">
+      <app-game *ngIf="game"></app-game>
+      <div id="nav-tabContent" class="tab-content overflow-auto" *ngIf="!showing && !game">
         <div id="list-experience" class="tab-pane fade show active" role="tabpanel" aria-labelledby="list-experience-list">
           <h6 class="bold cblue">
             EXPERIENCE
