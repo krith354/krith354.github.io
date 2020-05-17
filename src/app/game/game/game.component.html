@@ -1,5 +1,5 @@
 <canvas #canvas width="600" height="500" style="border: 1px solid black;"></canvas>
-<button (click)="start()">Jump</button>
+<button [disabled]="isJumping" (click)="jump()">Jump</button>
 <button (click)="reset()">Reset</button>
 <h1>Score: {{ score }}</h1>
 <h1 *ngIf="lost" style="color: red;">Lost! :(</h1>
