@@ -44,6 +44,12 @@
       <button *ngIf="game" class="btn btn-dark" (click)="showGame()">Exit Indie Game</button>
     </div>
     <div class="p-4 col-md-9">
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Hello!</strong> This site is currently under construction. If you see any issues or have any feedback email me <button class="btn-link" href="mailto:cristian.ruiz1@upr.edu">here.</button>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
       <app-embedded *ngIf="showing"></app-embedded>
       <app-game *ngIf="game"></app-game>
       <div id="nav-tabContent" class="tab-content overflow-auto" *ngIf="!showing && !game">
