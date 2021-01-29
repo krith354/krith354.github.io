@@ -1,0 +1,298 @@
+<div class="container-fluid p-0">
+    <div class="w-100 row m-0">
+      <div id="menu" class="bg-light shadow-sm col-md-3 sticky-top">
+        <div class="w-100 d-flex justify-content-center">
+          <img src="./assets/profile_pic_cris.jpg" class="rounded-circle my-2 shadow img-width" alt="Picture of Cristian Ruiz">
+        </div>
+        <div class="w-100 d-flex flex-column align-items-center">
+          <h3 class="bold cblue m-0">Cristian Ruiz</h3>
+          <!-- <p class="small m-0">PO BOX 5245, Aguadilla, PR 00605</p>
+          <p class="small m-0">(787) 354-7106</p> -->
+        </div>
+        <div class="w-100 d-flex justify-content-around my-1">
+          <div class="d-flex align-items-center justify-content-center icon-btn" type="button" onclick="javascript:window.open('https://linkedin.com/in/cristian-ruiz/', '_blank');">
+            <img src="./assets/linkedin.svg" alt="LinkedIn Icon" width="24" height="24" title="LinkedIn">
+          </div>
+          <div class="d-flex align-items-center justify-content-center icon-btn" type="button" onclick="javascript:window.open('https://mail.google.com/mail/?view=cm&fs=1&to=cristian.ruiz1@upr.edu');">
+            <img src="./assets/gmail.svg" alt="GMail Icon" width="24" height="24" title="GMail">
+          </div>
+          <div class="d-flex align-items-center justify-content-center icon-btn" type="button" onclick="javascript:window.open('https://github.com/krith354/', '_blank');">
+            <img src="./assets/github.svg" alt="GitHub Icon" width="24" height="24" title="GitHub">
+          </div>
+          <div class="d-flex align-items-center justify-content-center icon-btn" type="button" onclick="javascript:window.open('https://medium.com/@cristianruiz1/', '_blank');">
+            <img src="./assets/medium.svg" alt="Medium Icon" width="24" height="24" title="Medium">
+          </div>
+        </div>
+        <div id="list-tab" class="mb-4 list-group" role="tablist">
+          <a id="list-experience-list" class="w-100 text-center menu-btn list-group-item list-group-item-action active" href="#list-experience" data-toggle="list" role="tab" aria-controls="experience">
+            <h6 class="bold m-0">EXPERIENCE</h6>
+          </a>
+          <a id="list-education-list" class="w-100 text-center menu-btn list-group-item list-group-item-action" href="#list-education" data-toggle="list" role="tab" aria-controls="education">
+            <h6 class="bold m-0">EDUCATION</h6>
+          </a>
+          <a id="list-skills-list" class="w-100 text-center menu-btn list-group-item list-group-item-action" href="#list-skills" data-toggle="list" role="tab" aria-controls="skills">
+            <h6 class="bold m-0">TECHNICAL SKILLS</h6>
+          </a>
+          <a id="list-projects-list" class="w-100 text-center menu-btn list-group-item list-group-item-action" href="#list-projects" data-toggle="list" role="tab" aria-controls="projects">
+            <h6 class="bold m-0">PROJECTS</h6>
+          </a>
+          <a id="list-activities-list" class="w-100 text-center menu-btn list-group-item list-group-item-action" href="#list-activities" data-toggle="list" role="tab" aria-controls="activities">
+            <h6 class="bold m-0">LEADERSHIP & ACTIVITIES</h6>
+          </a>
+        </div>
+        <button *ngIf="!game" class="btn btn-dark" (click)="showGame()">Enter Indie Game</button>
+        <button *ngIf="game" class="btn btn-dark" (click)="showGame()">Exit Indie Game</button>
+      </div>
+      <div class="p-4 col-md-9">
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <strong>Hello!</strong> This site is currently under construction. If you see any issues or have any feedback email me <a class="btn-link" href="mailto:cristian.ruiz1@upr.edu">here.</a>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <app-embedded *ngIf="showing"></app-embedded>
+        <app-game *ngIf="game"></app-game>
+        <div id="nav-tabContent" class="tab-content overflow-auto" *ngIf="!showing && !game">
+          <div id="list-experience" class="tab-pane fade show active" role="tabpanel" aria-labelledby="list-experience-list">
+            <h6 class="bold cblue">
+              EXPERIENCE
+            </h6>
+            <div>
+              <div class="container-fluid m-0 pt-2 px-0">
+                <div class="row m-0 p-0">
+                  <div class="col-sm-6 p-0">
+                    <h6 class="bold mb-0">Embedded Systems Research <span class="small cblue btn-link mb-0" type="button" (click)="show()">Learn More</span></h6>
+                  </div>
+                  <div class="col-sm-6 p-0">
+                    <h6 class="small mb-0 text-md-right">Aug 2019 - Dec 2019</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center mb-1">
+                <span class="small font-italic">University of Puerto Rico - Mayagüez</span>
+              </div>
+              <ul class="mb-1">
+                <li class="normal">
+                  Studied the structure, components, design, and specifications of current Field Programmable Gate Arrays (FPGAs) to understand their applications in Edge Computing and Internet of Things (IoT) and develop a feasible project.
+                </li>
+              </ul>
+              <div class="container-fluid m-0 pt-2 px-0">
+                <div class="row m-0 p-0">
+                  <div class="col-sm-6 p-0">
+                    <h6 class="bold mb-0">Programmer Analyst Intern</h6>
+                  </div>
+                  <div class="col-sm-6 p-0">
+                    <h6 class="small mb-0 text-md-right">Aug 2018 - Dec 2018</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center mb-1">
+                <span class="small font-italic">MCS Healthcare Holdings Inc - San Juan, PR</span>
+              </div>
+              <ul class="mb-1">
+                <li class="normal">Developed a web application focused on automating the auditing process for user accesses in the IT Security Unit by processing and analyzing data from over 2000 internal and external company users and generating 8 different user access certifications and reports.</li>
+              </ul>
+              <div class="container-fluid m-0 pt-2 px-0">
+                <div class="row m-0 p-0">
+                  <div class="col-sm-6 p-0">
+                    <h6 class="bold mb-0">Front-end & UI/UX Engineer</h6>
+                  </div>
+                  <div class="col-sm-6 p-0">
+                    <h6 class="small mb-0 text-md-right">Jan 2018 - May 2018</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center mb-1">
+                <span class="small font-italic">University of Puerto Rico - Mayagüez</span>
+              </div>
+              <ul class="mb-1">
+                <li class="normal">Lead the usability testing team towards improving the user’s experience using the Industrial Affiliates Program (IAP) web application.</li>
+                <li class="normal">Created new wireframes and mockups for newly added administrative and statistical features.</li>
+                <li class="normal">Practiced scrum agile framework with the team to successfully complete all assigned front-end tasks.</li>
+              </ul>
+              <div class="container-fluid m-0 pt-2 px-0">
+                <div class="row m-0 p-0">
+                  <div class="col-sm-6 p-0">
+                    <h6 class="bold mb-0">Consultant & Front-end Developer</h6>
+                  </div>
+                  <div class="col-sm-6 p-0">
+                    <h6 class="small mb-0 text-md-right">Jun 2017 - Jun 2018</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center mb-1">
+                <span class="small font-italic">Richport Solutions Inc - Mayagüez</span>
+              </div>
+              <ul class="mb-1">
+                <li class="normal">Lead the front-end development of a social and digital media manager web-based system using build tools such as Bootstrap, Angular, Angular Material, Less, and Gulp.</li>
+                <li class="normal">Applied user-centered design and research providing the client with the requested in-app services.</li>
+              </ul>
+            </div>
+          </div>
+          <div id="list-education" class="tab-pane fade" role="tabpanel" aria-labelledby="list-education-list">
+            <h6 class="bold cblue">
+              EDUCATION
+            </h6>
+            <div>
+              <div class="container-fluid m-0 pt-2 px-0">
+                <div class="row m-0 p-0">
+                  <div class="col-sm-6 p-0">
+                    <h6 class="bold mb-0">Computer Engineering</h6>
+                  </div>
+                  <div class="col-sm-6 p-0">
+                    <h6 class="small mb-0 text-md-right">Aug 2015 - Present</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center mb-1">
+                <span class="small font-italic">University of Puerto Rico – Mayagüez</span>
+              </div>
+              <div class="d-flex align-items-center">
+                <span class="normal">Expected Graduation: <span class="bold">May 2021</span></span>
+              </div>
+              <div class="d-flex align-items-center">
+                <span class="normal">General GPA: <span class="bold">3.16</span></span>
+              </div>
+              <div class="d-flex align-items-center mb-1">
+                <span class="normal">Relevant Courses: Algorithms and Computer Programming, Advanced Programming, Fundamentals of Computer Programming, Data Structures, Software Engineering, Programming Languages, Computer Architecture and Organization</span>
+              </div>
+              <div class="container-fluid m-0 pt-2 px-0">
+                <div class="row m-0 p-0">
+                  <div class="col-sm-6 p-0">
+                    <h6 class="bold mb-0">Google Tech Exchange Program</h6>
+                  </div>
+                  <div class="col-sm-6 p-0">
+                    <h6 class="small mb-0 text-md-right">Jan 2020 - Present</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center mb-1">
+                <span class="small font-italic">Sunnyvale, California</span>
+              </div>
+              <div class="d-flex align-items-center">
+                <span class="normal">Expected Graduation: <span class="bold">May 2020</span></span>
+              </div>
+              <div class="d-flex align-items-center">
+                <span class="normal">General GPA: <span class="bold">Pending</span></span>
+              </div>
+              <div class="d-flex align-items-center mb-1">
+                <span class="normal">Relevant Courses: Machine Learning, Tech Entrepreneurship & Startups, Human-Computer Interaction, Product Management</span>
+              </div>
+            </div>
+          </div>
+          <div id="list-skills" class="tab-pane fade" role="tabpanel" aria-labelledby="list-skills-list">
+            <h6 class="bold cblue">
+              TECHNICAL SKILLS
+            </h6>
+            <div>
+              <div class="d-flex align-items-center">
+                <h6 class="bold mb-0 pt-2">Programming Languages</h6>
+              </div>
+              <div class="d-flex align-items-center mb-1">
+                <span class="normal">Java, JavaScript/TypeScript, HTML, CSS, Python, C, SQL</span>
+              </div>
+              <div class="d-flex align-items-center">
+                <h6 class="bold mb-0">Designing Software</h6>
+              </div>
+              <div class="d-flex align-items-center mb-1">
+                <span class="normal">Figma, Adobe XD, Illustrator, Photoshop, SketchApp, InVision</span>
+              </div>
+              <div class="d-flex align-items-center">
+                <h6 class="bold mb-0">Languages</h6>
+              </div>
+              <div class="d-flex align-items-center mb-1">
+                <span class="normal">English, Spanish</span>
+              </div>
+            </div>
+          </div>
+          <div id="list-projects" class="tab-pane fade" role="tabpanel" aria-labelledby="list-projects-list">
+            <h6 class="bold cblue">
+              PROJECTS
+            </h6>
+            <div>
+              <div class="d-flex align-items-center">
+                <span class="bold pt-2">Enfoque <span class="normal">- mobile app for the Puerto Rican Enfoque Film Festival</span></span>
+              </div>
+              <div class="d-flex align-items-center">
+                <span class="bold">Coki Light <span class="normal">- DIY light system kit to teach kids about embedded systems</span></span>
+              </div>
+              <div class="d-flex align-items-center">
+                <span class="bold">Indie Games <span class="normal">- custom card memorization and 2D Mega Man games</span></span>
+              </div>
+              <div class="d-flex align-items-center">
+                <span class="bold">Microprocessor Simulator <span class="normal">- custom microprocessor simulator built with Java</span></span>
+              </div>
+              <div class="d-flex align-items-center">
+                <span class="bold">Placement Office Web App <span class="normal"> - new and redesigned UPRM Placement Office web application</span></span>
+              </div>
+            </div>
+          </div>
+          <div id="list-activities" class="tab-pane fade" role="tabpanel" aria-labelledby="list-activities-list">
+            <h6 class="bold cblue">
+              LEADERSHIP & ACTIVITIES
+            </h6>
+            <div>
+              <div class="container-fluid m-0 pt-2 px-0">
+                <div class="row m-0 p-0">
+                  <div class="col-sm-6 p-0">
+                    <h6 class="bold mb-0">Board Member</h6>
+                  </div>
+                  <div class="col-sm-6 p-0">
+                    <h6 class="small mb-0 text-md-right">Jan 2018 - Present</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center">
+                <span class="normal">Computing Alliance for Hispanic-Serving Institutions (CAHSI) UPRM Chapter</span>
+              </div>
+              <div class="container-fluid m-0 pt-2 px-0">
+                <div class="row m-0 p-0">
+                  <div class="col-sm-6 p-0">
+                    <h6 class="bold mb-0">Code For Good</h6>
+                  </div>
+                  <div class="col-sm-6 p-0">
+                    <h6 class="small mb-0 text-md-right">Oct 2019</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center">
+                <span class="normal">Hackathon at JPMorgan & Chase</span>
+              </div>
+              <div class="container-fluid m-0 pt-2 px-0">
+                <div class="row m-0 p-0">
+                  <div class="col-sm-6 p-0">
+                    <h6 class="bold mb-0">HackPR</h6>
+                  </div>
+                  <div class="col-sm-6 p-0">
+                    <h6 class="small mb-0 text-md-right">Sep 2018</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center">
+                <span class="normal">National Hackathon in Puerto Rico</span>
+              </div>
+              <div class="container-fluid m-0 pt-2 px-0">
+                <div class="row m-0 p-0">
+                  <div class="col-sm-6 p-0">
+                    <h6 class="bold mb-0">IEEE Member</h6>
+                  </div>
+                  <div class="col-sm-6 p-0">
+                    <h6 class="small mb-0 text-md-right">Jan 2017 - May 2019</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center">
+                <span class="normal">IEEE Computer Society UPRM Chapter</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    $('#list-tab a').on('click', function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+    })
+  </script>
